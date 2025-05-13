@@ -14,7 +14,14 @@ st.markdown("---")
 
 # 사용자 선택 안내 (크게)
 st.markdown("#### 📍 당신의 MBTI를 골라보세요:")
-mbti_types = ["INTJ", "INFP", "ENTP", "ISFJ", "ENFP", "ISTP", "ESFJ", "INFJ"]
+#mbti_types = ["INTJ", "INFP", "ENTP", "ISFJ", "ENFP", "ISTP", "ESFJ", "INFJ"]
+mbti_types = [
+    "INTJ", "INTP", "ENTJ", "ENTP",
+    "INFJ", "INFP", "ENFJ", "ENFP",
+    "ISTJ", "ISFJ", "ESTJ", "ESFJ",
+    "ISTP", "ISFP", "ESTP", "ESFP"
+]
+
 selected_mbti = st.selectbox("", mbti_types)
 
 # MBTI 유형별 진로 데이터
