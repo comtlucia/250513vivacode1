@@ -186,9 +186,9 @@ if selected_mbti:
     st.subheader("💬 성향 분석")
     st.markdown(f"**{profile['style']}**")
     st.markdown("---")
-    st.markdown("## 🎯 추천 진로")
+    st.markdown("### 🎯 추천 진로")
     for job in profile["jobs"]:
-        st.markdown(f"### {job['name']}")
+        st.markdown(f"#### {job['name']}")
         st.markdown(f"- {job['reason']}")
     st.markdown("---")
     st.success("🌟 진로는 정답이 아니라 방향이에요. 당신다운 길을 스스로 열어가 보세요!")
