@@ -60,8 +60,8 @@ if selected_mbti:
     for field_name, jobs in profile["fields"].items():
         st.markdown(f"### 🎯 {field_name}")
         for job_title, job_reason in jobs:
-            st.markdown(f"**  {job_title}**")   # 직업명: 굵게 + 들여쓰기
-            st.markdown(f"  {job_reason}")      # 설명: 일반 텍스트 + 들여쓰기
+            st.markdown(f"  {job_title}")   # 직업명: 굵게 + 들여쓰기
+            st.markdown(f"      {job_reason}")      # 설명: 일반 텍스트 + 들여쓰기
 
     st.markdown("---")
     st.success("🌟 진로는 정답이 아니라 탐험이에요. 당신의 성향을 나침반 삼아 자신만의 길을 만들어보세요!")
