@@ -47,7 +47,7 @@ st.set_page_config(page_title="MBTI 진로 추천", page_icon="🌟", layout="ce
 # 제목 및 소개
 st.title("🌈 나를 닮은 진로 찾기")
 st.subheader("MBTI로 알아보는 나만의 진로 제안서 ✨")
-st.write("단순한 성격 분석을 넘어서, **당신다운 진로**를 함께 상상해봐요!")
+st.write("단순한 성격 분석을 넘어서 **당신다운 진로**를 함께 상상해봐요!")
 
 # MBTI 선택
 selected_mbti = st.selectbox("📍 당신의 MBTI를 선택하세요!", list(mbti_profiles.keys()))
