@@ -51,7 +51,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # 사용자 MBTI 선택
-st.markdown("## 📍 당신의 MBTI를 선택하세요!")
+st.markdown("### 📍 당신의 MBTI를 선택하세요!")
 selected_mbti = st.selectbox("MBTI 유형 선택", list(mbti_profiles.keys()))
 
 # 선택 결과 출력
