@@ -40,15 +40,15 @@ mbti_profiles = {
     }
 }
 
-# 앱 설정
+# 앱 구성
 st.set_page_config(page_title="MBTI 진로 추천", page_icon="🌟", layout="centered")
 st.title("🌈 나를 닮은 진로 찾기")
 st.subheader("MBTI로 알아보는 나만의 진로 제안서 ✨")
 st.write("단순한 성격 분석을 넘어서, **당신다운 진로**를 함께 상상해봐요!")
 
-# MBTI 선택
+# 사용자 MBTI 선택
 st.markdown("#### 📍 당신의 MBTI를 골라보세요:")
-selected_mbti = st.selectbox(label="", options=list(mbti_profiles.keys()))
+selected_mbti = st.selectbox("", list(mbti_profiles.keys()))
 
 # 결과 출력
 if selected_mbti:
@@ -57,10 +57,11 @@ if selected_mbti:
     st.subheader(f"💬 당신은... {selected_mbti}!")
     st.write(profile["style"])
 
-    for field, jobs in profile["fields"].items():
-        st.markdown(f"### 🎯 {field}")
+    for field_name, jobs in profile["fields"].items():
+        st.markdown(f"### 🎯 {field_name}")
         for job_title, job_reason in jobs:
-            st.markdown(f"**{job_title}**\n{job_reason}")
+            st.markdown(f"**  {job_title}**")   # 직업명: 굵게 + 들여쓰기
+            st.markdown(f"  {job_reason}")      # 설명: 일반 텍스트 + 들여쓰기
 
     st.markdown("---")
     st.success("🌟 진로는 정답이 아니라 탐험이에요. 당신의 성향을 나침반 삼아 자신만의 길을 만들어보세요!")
