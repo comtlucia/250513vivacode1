@@ -7,7 +7,7 @@ st.set_page_config(page_title="🌟 나를 닮은 직업 찾기", page_icon="�
 st.markdown("""
 #### 🌟 "내 성향으로 미래를 그려봐!" 🌟  
 ##### MBTI로 보는 ✨맞춤형 진로 로드맵✨  
-> 내게 어울리는 일 찾기!  
+> 나의 성향에 적합한 일을 확인해보자!  
 """)
 
 st.markdown("---")
