@@ -1,3 +1,23 @@
+import streamlit as st
+
+# 페이지 설정
+st.set_page_config(page_title="🌟 나를 닮은 직업 찾기", page_icon="🧭", layout="centered")
+
+# 타이틀
+st.markdown("""
+# 🌟 "내 성향으로 미래를 그려봐!" 🌟  
+### MBTI로 보는 ✨맞춤형 진로 로드맵✨  
+> 내가 어떤 사람인지 알면, 어울리는 일이 보이기 시작해요.  
+""")
+
+st.markdown("---")
+
+# 사용자 선택 안내 (크게)
+st.markdown("#### 📍 당신의 MBTI를 골라보세요:")
+mbti_types = ["INTJ", "INFP", "ENTP", "ISFJ", "ENFP", "ISTP", "ESFJ", "INFJ"]
+selected_mbti = st.selectbox("", mbti_types)
+
+# MBTI 유형별 진로 데이터
 mbti_data = {
     "INTJ": {
         "style": "🧠 전략적이고 냉철한 INTJ! 복잡한 문제도 침착하게 풀어나가는 타입이에요.",
@@ -80,3 +100,15 @@ mbti_data = {
         ]
     }
 }
+# 결과 출력
+if selected_mbti:
+    profile = mbti_data[selected_mbti]
+    st.markdown("---")
+    st.subheader("💬 성향 분석")
+    st.markdown(f"**{profile['style']}**")
+    st.markdown("## 🎯 추천 진로")
+    for job in profile["jobs"]:
+        st.markdown(f"### {job['name']}")
+        st.markdown(f"- {job['reason']}")
+    st.markdown("---")
+    st.success("🌟 진로는 정답이 아니라 방향이에요. 당신다운 길을 스스로 열어가 보세요!")
