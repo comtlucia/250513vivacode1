@@ -58,10 +58,10 @@ if selected_mbti:
     st.write(profile["style"])
 
     for field_name, jobs in profile["fields"].items():
-        st.markdown(f"#### 🎯 {field_name}")
+        st.markdown(f"### 🎯 {field_name}")
         for job_title, job_reason in jobs:
             # 직업명: 크고 들여쓰기 (### 제목 수준)
-            st.markdown(f"### &nbsp;&nbsp;&nbsp;{job_title}", unsafe_allow_html=True)
+            st.markdown(f"#### &nbsp;&nbsp;&nbsp;{job_title}", unsafe_allow_html=True)
             # 설명: 기본 크기, 직업명보다 한 칸 더 들여쓰기
             st.markdown(f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{job_reason}", unsafe_allow_html=True)
 
